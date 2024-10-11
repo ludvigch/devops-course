@@ -1,6 +1,6 @@
 name: Essay Word Count
 'on':
-  pull_request:
+  #pull_request:
   workflow_dispatch: {}
 jobs:
   check-essay:
