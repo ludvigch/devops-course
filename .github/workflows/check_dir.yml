@@ -41,3 +41,7 @@ jobs:
             done
             file_count=$(echo ${ALL_CHANGED_FILES} | wc -w)
             echo $file_count
+            if [ "${ALL_CHANGED_FILES_COUNT}" -ne 1 ]; then
+              echo "Error: More than one file changed."
+              exit 1
+            fi
