@@ -33,10 +33,8 @@ jobs:
             for file in ${ALL_CHANGED_FILES}; do
               echo "$file was changed"
             done
-            file_count=$(echo ${ALL_CHANGED_FILES} | wc -w)
-            echo $file_count
             if [ "${ALL_CHANGED_FILES_COUNT}" -ne 1 ]; then
-              echo "Error: More than one file changed"
+              echo "Error: More than one file changed(${ALL_CHANGED_FILES_COUNT})"
               exit 1
             fi
             if [[ $ALL_CHANGED_FILES =~ ^contributions\/(executable-tutorial|feedback|open-source)\/[^\/]+\/README\.md$ ]]; then
