@@ -45,7 +45,7 @@ jobs:
               echo "Error: More than one file changed."
               exit 1
             fi
-            if [[ ! $ALL_CHANGED_FILES =~ ^contributions\/(executable-tutorial|feedback|open-source)\/[\s\S]*-[\s\S]*\/README\.md$ ]]; then
+            if [[ ! $ALL_CHANGED_FILES =~ ^contributions\/(executable-tutorial|feedback|open-source)\/[\S]*-[\S]*\/README\.md$ ]]; then
               echo "Error: Not an async task"
               exit 1
             fi
