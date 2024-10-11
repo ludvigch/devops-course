@@ -23,5 +23,7 @@ jobs:
         
         - name: Check file modifications
           run: gh pr view ${{ github.event.number }} --json files --jq '.files.[].path' | cat
+          env:
+            GH_TOKEN: ${{ github.token }}
           #with: 
           #  x:  ${{ github.event.number }}
