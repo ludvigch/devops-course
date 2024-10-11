@@ -38,3 +38,5 @@ jobs:
             for file in ${ALL_CHANGED_FILES}; do
               echo "$file was changed"
             done
+            file_count=$(echo ${ALL_CHANGED_FILES} | wc -w)
+            echo $file_count
