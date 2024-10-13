@@ -4,7 +4,7 @@ name: Check task
 on:
   pull_request_target:
     branches:
-      - 2024
+      - final-test
     paths:
       - contributions/**
 
